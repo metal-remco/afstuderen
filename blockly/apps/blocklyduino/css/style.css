@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.clear{
+  float: none;
+}
+
+.clearfix:after{
+  visibility: hidden;
+  display: block;
+  font-size: 8;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+body {
+  margin: 0;
+  padding:0;
+  overflow: hidden;
+}
+.blocklySvg {
+  height: 100%;
+  width: 100%;
+}
+h1 {
+  font-weight: normal;
+  font-size: 140%;
+}
+
+#menu{
+
+}
+
+#menu ul li{
+  cursor: pointer;
+  float: left;
+  width: 100px;
+}
+
+/*pre,
+#content_xml,
+#content_arduino {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-top-style: none;
+  overflow: hidden;
+  display: none;
+}
+#textarea_xml,
+#textarea_arduino {
+  width: 100%;
+  height: 100%;
+  border: none;
+  resize: none;
+}*/
+
+#content_blocks {
+  display: block;
+
+  float: left;
+  width: 500px;
+}
+
+#content_arduino {
+  display: block;
+
+  float: left;
+  width: 500px;
+}
+
+#content_xml {
+  display: none;
+
+  float: left;
+  width: 350px;
+}
+
+#textarea_xml,
+#textarea_arduino {
+  height: 100%;
+  width: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-top-style: none;
+}
+button {
+  padding: 1px 1em;
+  font-size: 90%;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: #eee;
+  color: black;
+}
+button.launch {
+  border: 1px solid #d43;
+  background-color: #d43;
+  color: white;
+}
+button:active {
+  border: 1px solid blue !important;
+}
+button:hover {
+  box-shadow: 2px 2px 5px #888;
+}
