@@ -76,7 +76,7 @@ function renderContent() {
 
   var arduinoTextarea = document.getElementById('textarea_arduino');
     arduinoTextarea.value = Blockly.Generator.workspaceToCode('Arduino');
-    arduinoTextarea.focus();
+    //arduinoTextarea.focus();
 }
 
 /**
