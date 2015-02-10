@@ -75,7 +75,11 @@ function renderContent() {
   // }
 
   var arduinoTextarea = document.getElementById('textarea_arduino');
-    arduinoTextarea.value = Blockly.Generator.workspaceToCode('Arduino');
+  arduinoTextarea.value = Blockly.Generator.workspaceToCode('Arduino');
+  var xmlTextarea = document.getElementById('textarea_xml');
+  var xmlDom = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  var xmlText = Blockly.Xml.domToPrettyText(xmlDom);
+  xmlTextarea.value = xmlText;
     //arduinoTextarea.focus();
 }
 
