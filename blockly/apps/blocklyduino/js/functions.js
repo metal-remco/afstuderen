@@ -53,26 +53,26 @@ function tabClick(id) {
 function renderContent() {
   var content = document.getElementById('content_' + selected);
   // Initialize the pane.
-  if (content.id == 'content_blocks') {
-    // If the workspace was changed by the XML tab, Firefox will have performed
-    // an incomplete rendering due to Blockly being invisible.  Rerender.
-    Blockly.mainWorkspace.render();
-  } else if (content.id == 'content_xml') {
-    var xmlTextarea = document.getElementById('textarea_xml');
-    var xmlDom = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
-    var xmlText = Blockly.Xml.domToPrettyText(xmlDom);
-    xmlTextarea.value = xmlText;
-    xmlTextarea.focus();
-  /*} else if (content.id == 'content_javascript') {
-    content.innerHTML = Blockly.Generator.workspaceToCode('JavaScript');
-  } else if (content.id == 'content_dart') {
-    content.innerHTML = Blockly.Generator.workspaceToCode('Dart');
-  } else if (content.id == 'content_python') {
-    content.innerHTML = Blockly.Generator.workspaceToCode('Python');*/
-  } else if (content.id == 'content_arduino') {
-    //content.innerHTML = Blockly.Generator.workspaceToCode('Arduino');
+  // if (content.id == 'content_blocks') {
+  //   // If the workspace was changed by the XML tab, Firefox will have performed
+  //   // an incomplete rendering due to Blockly being invisible.  Rerender.
+  //   Blockly.mainWorkspace.render();
+  // } else if (content.id == 'content_xml') {
+  //   var xmlTextarea = document.getElementById('textarea_xml');
+  //   var xmlDom = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
+  //   var xmlText = Blockly.Xml.domToPrettyText(xmlDom);
+  //   xmlTextarea.value = xmlText;
+  //   xmlTextarea.focus();
+  // /*} else if (content.id == 'content_javascript') {
+  //   content.innerHTML = Blockly.Generator.workspaceToCode('JavaScript');
+  // } else if (content.id == 'content_dart') {
+  //   content.innerHTML = Blockly.Generator.workspaceToCode('Dart');
+  // } else if (content.id == 'content_python') {
+  //   content.innerHTML = Blockly.Generator.workspaceToCode('Python');*/
+  // } else if (content.id == 'content_arduino') {
+  //   //content.innerHTML = Blockly.Generator.workspaceToCode('Arduino');
     
-  }
+  // }
 
   var arduinoTextarea = document.getElementById('textarea_arduino');
     arduinoTextarea.value = Blockly.Generator.workspaceToCode('Arduino');

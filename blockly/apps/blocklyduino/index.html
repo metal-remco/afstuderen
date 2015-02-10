@@ -9,7 +9,7 @@
   <script type="text/javaScript" src="js/functions.js"></script>
   <link rel="stylesheet" href="css/style.css"></link>
 </head>
-<body>
+<body onclick="renderContent()">
   <div id="main">
     <div id="header">
         <h1><a href="https://github.com/gasolin/BlocklyDuino/wiki">BlocklyDuino</a></h1>
@@ -29,11 +29,11 @@
               <input type="file" id="load" style="display: none;"/>
             </td> -->
       </div>
-      <div id="content" class="clearfix" onClick="renderContent()">
+      <div id="content" class="clearfix">
         <iframe id="content_blocks" src="frame.html"></iframe>
         <div id="content_arduino">
-          <button type="button" onclick="uploadClick()">Upload</button>
-          <button type="button" onclick="resetClick()">Reset</button>
+          <!-- <button type="button" onclick="uploadClick()">Upload</button>
+          <button type="button" onclick="resetClick()">Reset</button> -->
           <textarea id="textarea_arduino" readonly></textarea>
         </div>
         <div id="content_xml">
