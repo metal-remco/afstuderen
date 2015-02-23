@@ -37,7 +37,7 @@ h1 {
 #menu ul li{
   cursor: pointer;
   float: left;
-  width: 100px;
+  padding: 10px 20px;
 }
 
 /*pre,
@@ -61,22 +61,21 @@ h1 {
 }*/
 
 #header h1{
-  float: left;
-  margin-right: 20px;
+  text-align: center;
 }
 
 #content_blocks {
   display: block;
 
   float: left;
-  width: 500px;
+  width: 650px;
 }
 
 #content_arduino {
   display: block;
 
   float: left;
-  width: 500px;
+  width: 350px;
 }
 
 #content_xml {
@@ -86,17 +85,22 @@ h1 {
   width: 350px;
 }
 
+#content_blocks,
+#content_arduino,
+#content_xml{
+  height: 85%;
+}
+
 #textarea_xml,
 #textarea_arduino {
   height: 100%;
+  padding: 10px;
   width: 100%;
 }
 
 iframe {
   width: 100%;
-  height: 100%;
-  border: 1px solid #ccc;
-  border-top-style: none;
+  border: none;
 }
 button {
   padding: 1px 1em;
@@ -119,7 +123,7 @@ button:hover {
 }
 
 
-/* blockly specific /*
+/* blockly specific */
 .blocklyToolboxBackground{
   background-color: #fff;
   fill: none !important;
@@ -127,4 +131,12 @@ button:hover {
 
 .blocklyToolboxOptions>.blocklyMenuDiv {
   fill: none !important;
+}
+
+.blocklyMenuText{
+  cursor: pointer !important;
+}
+
+.blocklyMenuText:hover{
+  text-decoration: underline;
 }
