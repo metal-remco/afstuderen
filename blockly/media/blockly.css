@@ -198,7 +198,7 @@
   fill: #57e;
 }
 .blocklyMenuText {
-  cursor: default !important;
+  /*cursor: default !important;*/
   font-family: sans-serif;
   font-size: 15px; /* All context menu sizes are based on pixels. */
   fill: #000;
