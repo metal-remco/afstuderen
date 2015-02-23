@@ -35,15 +35,9 @@ h1 {
 }
 
 #menu ul li{
-  float:left;
-  list-style-type: none;
-  margin: 10px 0;
-  padding: 0 10px;
-  border-right: 1px solid #000;
-}
-
-#menu ul li:first-child{
-  padding: 0 10px 0 0;
+  cursor: pointer;
+  float: left;
+  width: 100px;
 }
 
 /*pre,
@@ -67,24 +61,22 @@ h1 {
 }*/
 
 #header h1{
-  /*float: left;
-  margin-right: 20px;*/
-  text-align: center;
+  float: left;
+  margin-right: 20px;
 }
 
 #content_blocks {
-  box-sizing: border-box;
   display: block;
+
   float: left;
-  margin-left:-20px;
-  width: 700px;
+  width: 500px;
 }
 
 #content_arduino {
   display: block;
 
   float: left;
-  width: 300px;
+  width: 500px;
 }
 
 #content_xml {
@@ -97,14 +89,14 @@ h1 {
 #textarea_xml,
 #textarea_arduino {
   height: 100%;
-  padding: 10px;
   width: 100%;
 }
 
 iframe {
   width: 100%;
   height: 100%;
-  border:none;
+  border: 1px solid #ccc;
+  border-top-style: none;
 }
 button {
   padding: 1px 1em;
@@ -127,7 +119,7 @@ button:hover {
 }
 
 
-/* blockly specific */
+/* blockly specific /*
 .blocklyToolboxBackground{
   background-color: #fff;
   fill: none !important;
@@ -135,12 +127,4 @@ button:hover {
 
 .blocklyToolboxOptions>.blocklyMenuDiv {
   fill: none !important;
-}
-
-.blocklyMenuText{
-  cursor: pointer !important;
-}
-
-.blocklyMenuText:hover{
-  text-decoration: underline;
 }
