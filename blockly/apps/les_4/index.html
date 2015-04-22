@@ -25,9 +25,9 @@
       <div id="content" class="clearfix">
         <div class="text_block clearfix">
           <div class="left_text_block">
-            <h2>Les 4: Piezo Spekaer</h2>
+            <h2>Les 4: Piezo Speaker</h2>
             <p>
-              
+              In deze les gaan wij gebruik maken van Analog Output. Dit verschilt van de Digital Output. Met Analog Ouput is het mogelijk om een lampje minder fel of feller te laten branden, of een geluidje te produceren. Het is hierdoor ook mogelijk om bijvoorbeeld een servo aan te sturen, zodat objecten kunnen bewegen.
             </p>
           </div>
           <div class="right_text_block">
@@ -48,16 +48,10 @@
                     <td><img src="../assets/img/les_1/breadboard.png"></td>
                   </tr>
                   <tr>
-                    <td>3x Weerstand van 270 Ohm</td>
-                    <td><img src="../assets/img/les_1/resistor_270.jpg"></td>
-                    <td>3x LED</td>
-                    <td><img src="../assets/img/les_1/led.jpg"></td>
-                  </tr>
-                  <tr>
-                    <td>1x LDR</td>
-                    <td><img src="../assets/img/les_3/ldr.jpg"></td>
-                    <td>1x Weerstand van 1k Ohm</td>
-                    <td><img src="../assets/img/les_2/resistor_1k.jpg"></td>
+                    <td>1x Weerstand van 220 Ohm</td>
+                    <td><img src="../assets/img/les_4/resistor_220.jpg"></td>
+                    <td>1x Piezo Speaker</td>
+                    <td><img src="../assets/img/les_4/piezo_speaker.jpg"></td>
                   </tr>
                 </tbody>
               </table>
@@ -69,23 +63,26 @@
         </div>
         <div class="text_block clearfix">
           <div class="left_text_block">
-            <h3>LDR</h3>
+            <h3>Piezo Speaker</h3>
             <p>
-              De Arduino kan verschillende signalen ontvangen, namelijk analoog en digitaal. In deze les gaan wij werken met analoog. Een analoog signaal kan meerdere waardes bevattan, in het geval van de Arduino zijn dit 1024 waardes. Deze waardes lopen van 0 tot 1023. Hierdoor kan je veel nauwkeuriger meten dan met een digitaal signaal dat maar twee waardes kan bevatten, namelijk 0 of 1.
+              De Arduino kan verschillende waardes uitzenden, namelijk analoog en digitaal. Bij Digital Output maakten we gebruik van HIGH and LOW, dit zijn twee waardes. Met Analog Ouput kunnen we gebruik maken van meer dan twee waardes, namelijk alles tussen 0 en 255. Dus in totaal zijn er 256 waardes.
             </p>
             <p>
-              Om deze les te maken heb je de volgende schakeling nodig, die hiernaast is weergegeven. Deze schakeling is niet heel anders dan in les 2. Het enige wat veranderd is dat de push button vervangen is door een LDR. Deze LDR wordt op haast dezelfde manier aangesloten als de push button. Hierbij moet worden opgelet dat de data lijn niet naar een digitale poort gaat, maar naar een analoge poort.
+              Om deze les te maken heb je de volgende schakeling nodig, deze is hiernaast weergegeven. In deze schakeling wordt niet meer gebruik gemaakt van lampjes maar van een enkele piezo speaker. Deze wordt aangesloten op een digitale poort van de Arduino, let op, naast deze digitale poort moet een rimpeltje staan. Als deze hier niet staat dan ondersteunt deze poort geen Analoge Output en gaat de speaker niet werken. Daarnaast is een weerstand geplaatst op de positieve kant van de speaker, dit zorgt ervoor dat het geluid niet zo hard is.
+            </p>
+            <p>
+              De piezo speaker heeft twee verschillende poortjes, een lange en een korte. Deze pootjes werken hetzelfde als bij de LED's, het lange pootje is de positieve kant en het korte pootje is de negatieve kant.
             </p>
           </div>
           <div class="right_text_block">
-            <img src="../assets/img/les_3/ldr_circuit.png" alt="ldr circuit">
+            <img src="../assets/img/les_4/piezo_speaker_circuit.png" alt="speaker circuit">
           </div>
         </div>
         <div class="text_block clearfix">
           <div class="left_text_block">
             <h3>De opdracht</h3>
             <p>
-              De bedoeling is dat bij het veranderen van de lichtsterkte, meer of minder lampjes gaan branden.
+              Zorg ervoor dat je verschillende toonhoogtes kan produceren met de piezo speaker.
             </p>
           </div>
           <div class="right_text_block clearfix">
