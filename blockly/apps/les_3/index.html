@@ -23,46 +23,23 @@
         </ul>
       </div>
       <div id="content" class="clearfix">
-        <h2>Les 1: Inleiding</h2>
         <div class="text_block clearfix">
           <div class="left_text_block">
-            <h3>Arduino</h3>
+            <h2>Les 3: LDR</h2>
             <p>
-              Arduino is een open source platform van microcontrollers. Een microcontroller is een soort computer waar maar 1 programma op draait dit in tegenstelling tot een Raspberry Pi of de computer waarop je dit leest. 
-            </p>
-            <p>
-              Dit heeft verschillende voordelen zoals:
+              In deze les gaan wij gebruik maken van de functie Ananlog Input van de Arduino. In de vorige les is het begrip Digital Input aan bod gekomen, Analog Input werkt hetzelfde maar is wel verschillend. Door middel van deze functie kan gebruik worden gemaakt van verschillende sensoren, zoals:
               <ul>
-                <li>Energiezuinig</li>
-                <li>Geen ingewikkeld besturingssysteem</li>
-                <li>Geen overbodige code</li>
+                <li>LDR(Light Dependent Resitor)/lichtsensor</li>
+                <li>Temperatuur sensor</li>
+                <li>Geluidssensor</li>
+                <li>Druksensor</li>
+                <li>Bewegingssensor</li>
               </ul>
+              Hierdoor kan de Arduino acties uitvoeren op veranderingen in zijn omgevingen. Deze sensoren verschillen van een push button, doordat deze sensoren vele verschillende waardes kunnen bevattan. Bijvoorbeeld bij licht, daar kan het licht aan of uit zijn. Maar met een dimmerknop kan ook de lichtsterkte veranderd worden, waardoor het licht minder fel brand. Dit kan de Arduino dan meten.
             </p>
-            <p>
-              Op het moment van schrijven is de Arduino Uno de meest gebruikte Arduino microcontroller die gebruikt wordt. De Arduino Uno heeft verschillende poorten die gebruikt kunnen worden in je project. Deze poorten zijn te verdelen in drie categorieën:
-              <ul> 
-                <li>Digitale pinnen</li>
-                <li>Analoge pinnen</li>
-                <li>Energie/power pinnen</li>
-              </ul>
-            </p>
-            </div>
-            <div class="right_text_block">
-              <img src="../assets/img/les_1/arduino_explained.png" alt="arduino">
-            </div>
-        </div>
-        <div class="text_block clearfix">
-          <div class="left_text_block">
-          <h3>BreadBoard</h3>
-          <p>
-            Een breadboard is een plankje waar je componenten en draden kan insteken om de Arduino aan sensoren en verschillende outputs te koppelen. De meeste breadboards hebben 2 energierijen, waarvan er 1 grond/negatief is en 1 positief. Deze zijn meestal te herkennen aan de kleur en de + en - symbolen.
-          </p>
-          <p>
-            Op het breadboard zitten ook gewone rijen, deze zijn met elkaar verbonden tot de helft van het breadboard. Als we het bovenstaande breadboard als voorbeeld nemen, dan zijn rij 1 en kolom A B C D E met elkaar verbonden en rij 1 F G H I J, maar rij 1 E en F niet.
-          </p>
           </div>
           <div class="right_text_block">
-            <img src="../assets/img/les_1/breadboard.png" alt="breadboard">
+
           </div>
         </div>
         <div class="text_block clearfix">
@@ -79,10 +56,16 @@
                     <td><img src="../assets/img/les_1/breadboard.png"></td>
                   </tr>
                   <tr>
-                    <td>1x Weerstand van 270 Ohm</td>
+                    <td>3x Weerstand van 270 Ohm</td>
                     <td><img src="../assets/img/les_1/resistor_270.jpg"></td>
-                    <td>1x LED</td>
-                    <td><img src="../assets/img/les_1/arduino.jpg"></td>
+                    <td>3x LED</td>
+                    <td><img src="../assets/img/les_1/led.jpg"></td>
+                  </tr>
+                  <tr>
+                    <td>1x LDR</td>
+                    <td><img src="../assets/img/les_3/ldr.jpg"></td>
+                    <td>1x Weerstand van 1k Ohm</td>
+                    <td><img src="../assets/img/les_2/resistor_1k.jpg"></td>
                   </tr>
                 </tbody>
               </table>
@@ -94,34 +77,28 @@
         </div>
         <div class="text_block clearfix">
           <div class="left_text_block">
-            <h3>Hello Blink</h3>
+            <h3>LDR</h3>
             <p>
-              Voor de eerste les ga je Hello Blink maken. Hello Blink staat gelijk aan Hello World van andere programmeertalen. Dit is het eerste wat je maakt in een programmeertaal.
+              De Arduino kan verschillende signalen ontvangen, namelijk analoog en digitaal. In deze les gaan wij werken met analoog. Een analoog signaal kan meerdere waardes bevattan, in het geval van de Arduino zijn dit 1024 waardes. Deze waardes lopen van 0 tot 1023. Hierdoor kan je veel nauwkeuriger meten dan met een digitaal signaal dat maar twee waardes kan bevatten, namelijk 0 of 1.
             </p>
             <p>
-              Voor dit programma is de volgende elektrische schakeling nodig, die je hiernaast kan zien.
-            </p>
-            <p>
-              Een lampje ookwel LED genoemd, word verbonden met twee draadjes met de Arduino, waarbij op de positieve draad een weerstand van 220 of 270 ohm wordt gebruikt. Als deze niet wordt gebruikt dan bestaat de kans dat het lampje doorbrand. Het lampje wordt aan de positieve kant verbonden met een digitale poort, meestal is dit poort 13, de negatieve kant wordt verbonden met de grond. Dit zijn de GND poorten op de Arduino.
-            </p>
-            <p>
-              De LED heeft twee pootjes waaraan de draadjes kunnen worden verbonden. Het lange pootje van de LED is de positieve kant, het korte pootje is de negatieve kant.
+              Om deze les te maken heb je de volgende schakeling nodig, die hiernaast is weergegeven. Deze schakeling is niet heel anders dan in les 2. Het enige wat veranderd is dat de push button vervangen is door een LDR. Deze LDR wordt op haast dezelfde manier aangesloten als de push button. Hierbij moet worden opgelet dat de data lijn niet naar een digitale poort gaat, maar naar een analoge poort.
             </p>
           </div>
           <div class="right_text_block">
-            <img src="../assets/img/les_1/hello_blink.png" alt="hello_blink">
+            <img src="../assets/img/les_3/ldr_circuit.png" alt="ldr circuit">
           </div>
         </div>
         <div class="text_block clearfix">
           <div class="left_text_block">
             <h3>De opdracht</h3>
             <p>
-            De bedoeling is dat je het lampje elke seconde laat knipperen, waarbij jijzelf de Arduino moet programmeren.
+              De bedoeling is dat bij het veranderen van de lichtsterkte, meer of minder lampjes gaan branden.
             </p>
           </div>
           <div class="right_text_block clearfix">
             <p>
-              <a href="blockly/apps/les_1">Ga naar de editor &#8594;</a></p>
+              <a href="editor.html">Ga naar de editor &#8594;</a></p>
             </p>
           </div>
         </div>
