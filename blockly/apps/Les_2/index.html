@@ -1,54 +1,116 @@
-<html manifest=node.manifest>
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="utf-8">
   <title>HET LAB Rotterdam Workshop</title>
-  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-  <script type="text/javascript" src="../assets/js/Blob.js"></script>
-  <script type="text/javascript" src="../assets/js/spin.js"></script>
-  <script type="text/javascript" src="../assets/js/FileSaver.min.js"></script>
-  <script type="text/javascript" src="../assets/js/blockly_helper.js"></script>
-  <script type="text/javaScript" src="../assets/js/functions.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../assets/css/style.css"></link>
-
-  <script type="text/javascript">
-    window.setInterval(function(){
-      renderContent();
-    }, 500);
-  </script>
-  
+  <link rel="stylesheet" href="../../../css/style.css">
 </head>
-<body onclick="renderContent()">
+<body>
   <div id="main" class="container">
     <div id="header" class="clearfix">
-        <h1>Inleiding</h1>
+        <img src="../../../img/arduino-banner.jpg" alt="arduino">
     </div>
     <div id="content">
       <div id="menu" class="clearfix">
         <ul>
-          <li><a href="http://www.hetlabrotterdam.nl">Home</a></li>
-          <li><a href="blockly/apps/les_1/">Les 1: Inleiding</a></li>
-          <li><a href="#">Les 2: Stoplicht</a></li>
-          <li><a href="#">Les 3: LDR</a></li>
-          <li><a href="#">Les 4: Piezo speaker</a></li>
-          <li><a href="#">Les 5: Herhaling</a></li>
+          <li><a href="http://www.hetlabrotterdam.nl">&#8592; Terug naar de website</a></li>
+          <li><a href="../les_1">Les 1: Inleiding</a></li>
+          <li><a href="../les_2">Les 2: Stoplicht</a></li>
+          <li><a href="../les_3">Les 3: LDR</a></li>
+          <li><a href="../les_4">Les 4: Piezo speaker</a></li>
+          <li><a href="../full">Volledige Editor</a></li>
         </ul>
-            <!-- <td class="tabmax">
-              <button onclick="discard()">Discard</button>
-              <button onclick="save()">Save XML</button>
-              <button id="fakeload">Load XML</button>
-              <input type="file" id="load" style="display: none;"/>
-            </td> -->
       </div>
       <div id="content" class="clearfix">
-        <iframe id="content_blocks" src="frame.html"></iframe>
-        <div id="content_arduino">
-          <!-- <button type="button" onclick="uploadClick()">Upload</button>
-          <button type="button" onclick="resetClick()">Reset</button> -->
-          <textarea id="textarea_arduino" readonly></textarea>
+        <div class="text_block clearfix">
+          <div class="left_text_block">
+            <h2>Les 2: Stoplicht</h2>
+            <p>
+              In deze les gaan wij gebruik maken van de functie Digital Input van de Arduino. De Arduino kan niet alleen signalen uitzenden, maar ook ontvangen. Door middel van deze signalen kan de Arduino acties uitvoeren, zoals lampjes laten knipperen, een geluid maken of gegevens opslaan.
+            </p>
+          </div>
         </div>
-        <div id="content_xml">
-          <textarea id="textarea_xml" readonly></textarea>
+        <div class="text_block clearfix">
+          <div class="left_text_block">
+            <h3>Componenten</h3>
+            <p>
+              De volgende componenten worden gebruikt in deze les:
+              <table>
+                <tbody>
+                  <tr>
+                    <td>1x Arduino Uno</td>
+                    <td><img src="../assets/img/les_1/arduino.jpg"></td>
+                    <td>1x Breadboard</td>
+                    <td><img src="../assets/img/les_1/breadboard.png"></td>
+                  </tr>
+                  <tr>
+                    <td>3x Weerstand van 270 Ohm</td>
+                    <td><img src="../assets/img/les_1/resistor_270.jpg"></td>
+                    <td>3x LED</td>
+                    <td><img src="../assets/img/les_1/led.jpg"></td>
+                  </tr>
+                  <tr>
+                    <td>1x button</td>
+                    <td><img src="../assets/img/les_2/button.png"></td>
+                    <td>1x Weerstand van 1k Ohm</td>
+                    <td><img src="../assets/img/les_2/resistor_1k.jpg"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </p>
+          </div>
+          <div class="right_text_block">
+
+          </div>
+        </div>
+        <div class="text_block clearfix">
+          <div class="left_text_block">
+            <h3>Stoplicht</h3>
+            <p>
+              De Arduino kan verschillende signalen ontvangen, namelijk analoog en digitaal. In deze les gaan wij werken met digitaal. Een digitaal signaal kan maar twee waardes bevatten, een hoog signaal en een laag signaal. Dit kan je vergelijken met aan of uit, 0 of 1, waar of niet waar.
+            </p>
+            <p>
+              Om deze les te maken is de volgende schakeling nodig, die je hiernaast kan zien. Deze schakeling is iets uitgebreider dan de schakeling van les 1. Hier zijn drie lampjes aangesloten op de Arduino. Deze worden nog steeds hetzelfde aangesloten als in les 1, hierbij moet wel worden opgelet hoe de lampjes op de Arduino worden aangesloten. Alle lampjes kunnen dezelfde grond delen, maar hebben allemaal een eigen genummerde digitale poort op de Arduino voor de aansturing. Als deze op dezelfde genummerde poort worden aangesloten, gaan de lampjes tegelijk knipperen. Dit is natuurlijk niet de bedoeling, of dit is wat jijzelf wilde doen.
+            </p>
+            <p>
+              Wat nieuw aan de schakeling is, is de push button. Deze wordt aangesloten met drie draadjes.
+              <ol>
+                <li>Positief 5V</li>
+                <li>Negatief, ook wel grond genoemd</li>
+                <li>Signaal lijn of data lijn</li>
+              </ol>
+              De werking van de knop is als volgt:
+              <ol>
+                <li>Er gaat een positief signaal door de knop naar grond</li>
+                <li>Wordt erop de knop gedrukt, dan gaat de stroom via de data lijn terug naar de Arduino</li>
+              </ol>
+              Elektriciteit kiest altijd voor de weg van de minste weerstand. Voordat gedrukt wordt op de knop gaat de stroom van 5V naar grond, door de 1k Ohm weerstand. Als je op de knop drukt, wordt er een extra weg gemaakt voor de stroom. Doordat de stroom door de knop gaat en over de data lijn gaat en geen weerstand tegenkomt, krijg je een signaal binnen. Als je hier een weerstand zou plaatsen dat groter is dan de weerstand die gebruikt wordt in de schakeling, zou hier geen stroom doorheen lopen.
+            </p>
+            <p>
+              De weerstand bij de knop zorgt er ook voor dat er geen lekstroom onstaat richting de Arduino over de data lijn, dit zou een valse waarde zijn.
+            </p>
+          </div>
+          <div class="right_text_block">
+            <img src="../assets/img/les_2/button_circuit.png" alt="button_circuit">
+          </div>
+        </div>
+        <div class="text_block clearfix">
+          <div class="left_text_block">
+            <h3>De opdracht</h3>
+            <p>
+              De bedoeling is dat je de lampjes gaat manipuleren door middel van de knop. Enkele voorbeelden zijn:
+              <ul>
+                <li>Je drukt op de knop en alle lampjes gaan branden</li>
+                <li>Je drukt op de knop en 1 lampje gaat branden, je drukt nog een keer en het volgende lampje gaat branden</li>
+              </ul>
+            </p>
+          </div>
+          <div class="right_text_block clearfix">
+            <p>
+              <a href="blockly/apps/les_1">Ga naar de editor &#8594;</a></p>
+            </p>
+          </div>
         </div>
     </div>
   </div>

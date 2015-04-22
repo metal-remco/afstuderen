@@ -25,3 +25,62 @@
 	list-style-type: none;
 	padding: 10px;
 }
+
+#content ol{
+  padding-left: 20px;
+}
+
+.explanation_block h4 a{
+  text-decoration: none;
+  color: #333;
+  cursor: default;
+}
+
+.explanation_block{
+  background-color: rgba(86,61,124,.15);
+  box-sizing: border-box;
+  float:left;
+  padding: 15px;
+  position: relative;
+  margin:0 15px 15px 0;
+  min-height: 350px;
+  width: 270px;
+}
+
+.explanation_block p a{
+  bottom: 10px;
+  display: block;
+  position: absolute;
+}
+
+.text_block{
+  margin-top: 20px;
+}
+
+.text_block table td{
+  padding: 10px;
+}
+
+.text_block table img{
+  width: 150px;
+}
+
+.text_block li{
+  margin-left: 15px;
+}
+
+.right_text_block img{
+  width: 100%;
+}
+
+.right_text_block{
+  margin-top: 20px;
+}
+
+.left_text_block,
+.right_text_block{
+  box-sizing: border-box;
+  float:left;
+  padding: 10px;
+  width: 570px;
+}

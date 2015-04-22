@@ -100,17 +100,17 @@ function discard() {
 function auto_save_and_restore_blocks() {
   // Restore saved blocks in a separate thread so that subsequent
   // initialization is not affected from a failed load.
-  window.setTimeout(restore_blocks, 0);
-  // Hook a save function onto unload.
-  bindEvent(window, 'unload', backup_blocks);
-  tabClick('tab_' + selected);
+  // window.setTimeout(restore_blocks, 0);
+  // // Hook a save function onto unload.
+  // bindEvent(window, 'unload', backup_blocks);
+  // tabClick('tab_' + selected);
 
-  // Init load event.
-  var loadInput = document.getElementById('load');
-  loadInput.addEventListener('change', load, false);
-  document.getElementById('fakeload').onclick = function() {
-    loadInput.click();
-  };
+  // // Init load event.
+  // var loadInput = document.getElementById('load');
+  // loadInput.addEventListener('change', load, false);
+  // document.getElementById('fakeload').onclick = function() {
+  //   loadInput.click();
+  // };
 }
 
 /**

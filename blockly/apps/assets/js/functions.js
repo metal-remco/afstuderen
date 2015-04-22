@@ -1,13 +1,9 @@
 
 $(document).ready(function(){
-    window.localStorage.setItem('arduino', null);
-    console.log(window['localStorage']);
-    
+    window.localStorage.setItem('arduino', null); 
   });
 
-window.setInterval(function(){
-      renderContent();
-    }, 500);
+
 /**
  * List of tab names.
  * @private

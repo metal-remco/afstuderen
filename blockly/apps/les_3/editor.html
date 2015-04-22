@@ -1,0 +1,57 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>HET LAB Rotterdam Workshop</title>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="../assets/js/Blob.js"></script>
+  <script type="text/javascript" src="../assets/js/spin.js"></script>
+  <script type="text/javascript" src="../assets/js/FileSaver.min.js"></script>
+  <script type="text/javascript" src="../assets/js/blockly_helper.js"></script>
+  <script type="text/javaScript" src="../assets/js/functions.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css"></link>
+
+  <script type="text/javascript">
+    window.setInterval(function(){
+      renderContent();
+    }, 500);
+  </script>
+  
+</head>
+<body onclick="renderContent()">
+  <div id="main" class="container">
+    <div id="header" class="clearfix">
+        <h1>Les 3: LDR</h1>
+    </div>
+    <div id="content">
+      <div id="menu" class="clearfix">
+        <ul>
+          <li><a href="http://www.hetlabrotterdam.nl">&#8592; Terug naar de website</a></li>
+          <li><a href="../../../index.html">Home</a></li>
+          <li><a href="../les_1">Les 1: Inleiding</a></li>
+          <li><a href="../les_2">Les 2: Stoplicht</a></li>
+          <li><a href="../les_3">Les 3: LDR</a></li>
+          <li><a href="../les_4">Les 4: Piezo speaker</a></li>
+          <li><a href="../full">Volledige Editor</a></li>
+        </ul>
+            <!-- <td class="tabmax">
+              <button onclick="discard()">Discard</button>
+              <button onclick="save()">Save XML</button>
+              <button id="fakeload">Load XML</button>
+              <input type="file" id="load" style="display: none;"/>
+            </td> -->
+      </div>
+      <div id="content" class="clearfix">
+        <iframe id="content_blocks" src="frame.html"></iframe>
+        <div id="content_arduino">
+          <!-- <button type="button" onclick="uploadClick()">Upload</button>
+          <button type="button" onclick="resetClick()">Reset</button> -->
+          <textarea id="textarea_arduino" readonly></textarea>
+        </div>
+        <div id="content_xml">
+          <textarea id="textarea_xml" readonly></textarea>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
