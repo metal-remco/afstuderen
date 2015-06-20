@@ -5,6 +5,7 @@
   <title>HET LAB Rotterdam Workshop</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../css/style.css">
+  <link rel="stylesheet" href="../assets/css/zoom.css">
 </head>
 <body>
   <div id="main" class="container">
@@ -15,7 +16,7 @@
       <div id="menu" class="clearfix">
         <ul>
           <li><a href="http://www.hetlabrotterdam.nl">&#8592; Terug naar de website</a></li>
-          <li><a href="../../../index.html">Home</a></li>
+          <li><a href="../../../index.html">Lessenoverzicht</a></li>
           <li><a href="../les_1">Les 1: Inleiding</a></li>
           <li><a href="../les_2">Les 2: Stoplicht</a></li>
           <li><a href="../les_3">Les 3: LDR</a></li>
@@ -69,14 +70,14 @@
               De Arduino kan verschillende waardes uitzenden, namelijk analoog en digitaal. Bij Digital Output maakten we gebruik van HIGH and LOW, dit zijn twee waardes. Met Analog Ouput kunnen we gebruik maken van meer dan twee waardes, namelijk alles tussen 0 en 255. Dus in totaal zijn er 256 waardes.
             </p>
             <p>
-              Om deze les te maken heb je de volgende schakeling nodig, deze is hiernaast weergegeven. In deze schakeling wordt niet meer gebruik gemaakt van lampjes maar van een enkele piezo speaker. Deze wordt aangesloten op een digitale poort van de Arduino, let op, naast deze digitale poort moet een rimpeltje staan. Als deze hier niet staat dan ondersteunt deze poort geen Analoge Output en gaat de speaker niet werken. Daarnaast is een weerstand geplaatst op de positieve kant van de speaker, dit zorgt ervoor dat het geluid niet zo hard is.
+              Om deze les te maken heb je de volgende schakeling nodig, deze is hiernaast weergegeven. In deze schakeling wordt niet meer gebruik gemaakt van lampjes maar van een enkele piezo speaker. Deze wordt aangesloten op een digitale poort van de Arduino. <strong>Let op</strong>, naast deze digitale poort moet een rimpeltje staan. Als deze hier niet staat dan ondersteunt deze poort geen Analoge Output en gaat de speaker niet werken. Daarnaast is een weerstand geplaatst op de positieve kant van de speaker, dit zorgt ervoor dat het geluid niet zo hard is.
             </p>
             <p>
               De piezo speaker heeft twee verschillende poortjes, een lange en een korte. Deze pootjes werken hetzelfde als bij de LED's, het lange pootje is de positieve kant en het korte pootje is de negatieve kant.
             </p>
           </div>
           <div class="right_text_block">
-            <img src="../assets/img/les_4/piezo_speaker_circuit.png" alt="speaker circuit">
+            <img src="../assets/img/les_4/piezo_speaker_circuit.png" alt="speaker circuit" data-action="zoom">
           </div>
         </div>
         <div class="text_block clearfix">
@@ -94,5 +95,8 @@
         </div>
     </div>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="../assets/js/transition.js"></script>
+  <script type="text/javascript" src="../assets/js/zoom.js"></script>
 </body>
 </html>

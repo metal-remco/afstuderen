@@ -5,6 +5,7 @@
   <title>HET LAB Rotterdam Workshop</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../css/style.css">
+  <link rel="stylesheet" href="../assets/css/zoom.css">
 </head>
 <body>
   <div id="main" class="container">
@@ -15,7 +16,7 @@
       <div id="menu" class="clearfix">
         <ul>
           <li><a href="http://www.hetlabrotterdam.nl">&#8592; Terug naar de website</a></li>
-          <li><a href="../../../index.html">Home</a></li>
+          <li><a href="../../../index.html">Lessenoverzicht</a></li>
           <li><a href="../les_1">Les 1: Inleiding</a></li>
           <li><a href="../les_2">Les 2: Stoplicht</a></li>
           <li><a href="../les_3">Les 3: LDR</a></li>
@@ -56,7 +57,7 @@
           <div class="left_text_block">
           <h3>BreadBoard</h3>
           <p>
-            Een breadboard is een plankje waar je componenten en draden kan insteken om de Arduino aan sensoren en verschillende outputs te koppelen. De meeste breadboards hebben 2 energierijen, waarvan er 1 grond/negatief is en 1 positief. Deze zijn meestal te herkennen aan de kleur en de + en - symbolen.
+            Een breadboard is een plankje waar je componenten en draden kan insteken om de Arduino aan sensoren en verschillende outputs te koppelen. De meeste breadboards hebben 2 energierijen, waarvan er <strong>1 grond/negatief</strong> is en <strong>1 positief</strong>. Deze zijn meestal te herkennen aan de kleur en de + en - symbolen.
           </p>
           <p>
             Op het breadboard zitten ook gewone rijen, deze zijn met elkaar verbonden tot de helft van het breadboard. Als we het bovenstaande breadboard als voorbeeld nemen, dan zijn rij 1 en kolom A B C D E met elkaar verbonden en rij 1 F G H I J, maar rij 1 E en F niet.
@@ -110,14 +111,14 @@
             </p>
           </div>
           <div class="right_text_block">
-            <img src="../assets/img/les_1/hello_blink.png" alt="hello_blink">
+            <img src="../assets/img/les_1/hello_blink.png" alt="hello_blink" data-action="zoom">
           </div>
         </div>
         <div class="text_block clearfix">
           <div class="left_text_block">
             <h3>De opdracht</h3>
             <p>
-            De bedoeling is dat je het lampje elke seconde laat knipperen, waarbij jijzelf de Arduino moet programmeren.
+              De bedoeling is dat je het lampje elke seconde laat knipperen, waarbij jijzelf de Arduino moet programmeren.
             </p>
           </div>
           <div class="right_text_block clearfix">
@@ -129,4 +130,7 @@
     </div>
   </div>
 </body>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="../assets/js/transition.js"></script>
+  <script type="text/javascript" src="../assets/js/zoom.js"></script>
 </html>

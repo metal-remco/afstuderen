@@ -38,6 +38,7 @@ h1 {
   cursor: pointer;
   float: left;
   padding: 10px 20px;
+  list-style-type: none;
 }
 
 /*pre,
@@ -98,6 +99,25 @@ h1 {
   width: 100%;
 }
 
+#content_right{
+  float:left;
+  position: relative;
+  width:140px;
+}
+
+#steps{
+  margin-left: 5px;
+}
+
+#steps li{
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+#copy_holder p{
+  margin-left: 5px;
+}
+
 iframe {
   width: 100%;
   border: none;
@@ -129,14 +149,40 @@ button:hover {
   fill: none !important;
 }
 
-.blocklyToolboxOptions>.blocklyMenuDiv {
-  fill: none !important;
+.blocklyToolboxOptions > .blocklyMenuDiv {
+  fill: rgb(91, 104, 166) !important;
+  margin-bottom: 5px;
 }
 
-.blocklyMenuText{
+.blocklyToolboxOptions > .blocklyMenuDiv + .blocklyMenuDiv{
+  fill: rgb(91, 166, 91) !important;
+}
+
+.blocklyToolboxOptions > .blocklyMenuDiv + .blocklyMenuDiv + .blocklyMenuDiv{
+  fill: rgb(91, 104, 166) !important;
+}
+
+/*.blocklyToolboxOptions > .blocklyMenuDiv + .blocklyMenuDiv + .blocklyMenuDiv + .blocklyMenuDiv{
+  fill: rgb(91, 166, 141) !important;
+}*/
+
+.blocklyToolboxOptions > .blocklyMenuDiv + .blocklyMenuDiv + .blocklyMenuDiv + .blocklyMenuDiv{
+  fill: rgb(91, 166, 91) !important;
+}
+
+.blocklyToolboxOptions > .blocklyMenuDiv + .blocklyMenuDiv + .blocklyMenuDiv + .blocklyMenuDiv + .blocklyMenuDiv{
+  fill: rgb(166, 91, 128) !important;
+}
+
+.blocklyToolboxOptions > .blocklyMenuDiv + .blocklyMenuDiv + .blocklyMenuDiv + .blocklyMenuDiv + .blocklyMenuDiv + .blocklyMenuDiv{
+  fill: rgb(92, 55, 100) !important;
+}
+
+.blocklyToolboxOptions .blocklyMenuText{
   cursor: pointer !important;
+  fill: #FFF !important;
 }
 
-.blocklyMenuText:hover{
+.blocklyToolboxOptions .blocklyMenuText:hover{
   text-decoration: underline;
 }

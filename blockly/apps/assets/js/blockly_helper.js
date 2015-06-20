@@ -15,9 +15,11 @@ function runJS() {
  * Backup code blocks to localStorage.
  */
 function backup_blocks() {
+  var lessonNumber = document.getElementById('lesson_identifier').innerHTML;
   if ('localStorage' in window) {
+    var localStorageName = 'arduino';
     var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
-    window.localStorage.setItem('arduino', Blockly.Xml.domToText(xml));
+    window.localStorage.setItem("arduino" + lessonNumber, Blockly.Xml.domToText(xml));
   }
 }
 
@@ -25,9 +27,33 @@ function backup_blocks() {
  * Restore code blocks from localStorage.
  */
 function restore_blocks() {
-  if ('localStorage' in window && window.localStorage.arduino) {
-    var xml = Blockly.Xml.textToDom(window.localStorage.arduino);
-    Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+  var lessonNumber = document.getElementById('lesson_identifier').innerHTML;
+
+  if(lessonNumber) {
+    switch(lessonNumber) {
+      case "1":
+        var localStorage = window.localStorage.arduino1;
+        break;
+      case "2":
+        var localStorage = window.localStorage.arduino2;
+        break;
+      case "3":
+        var localStorage = window.localStorage.arduino3;
+        console.log("test");
+        break;
+      case "4":
+        var localStorage = window.localStorage.arduino4;
+        break;
+      case "5":
+        var localStorage = window.localStorage.arduino5;
+        break;
+    }
+
+    if ('localStorage' in window && localStorage) {
+      var xml = Blockly.Xml.textToDom(localStorage);
+     
+      Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
+    }
   }
 }
 
@@ -100,12 +126,13 @@ function discard() {
 function auto_save_and_restore_blocks() {
   // Restore saved blocks in a separate thread so that subsequent
   // initialization is not affected from a failed load.
-  // window.setTimeout(restore_blocks, 0);
+  window.setTimeout(restore_blocks, 0);
   // // Hook a save function onto unload.
-  // bindEvent(window, 'unload', backup_blocks);
-  // tabClick('tab_' + selected);
 
-  // // Init load event.
+  bindEvent(window, 'unload', backup_blocks);
+  tabClick('tab_' + selected);
+
+  // Init load event.
   // var loadInput = document.getElementById('load');
   // loadInput.addEventListener('change', load, false);
   // document.getElementById('fakeload').onclick = function() {

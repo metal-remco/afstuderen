@@ -5,6 +5,7 @@
   <title>HET LAB Rotterdam Workshop</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../css/style.css">
+  <link rel="stylesheet" href="../assets/css/zoom.css">
 </head>
 <body>
   <div id="main" class="container">
@@ -15,7 +16,7 @@
       <div id="menu" class="clearfix">
         <ul>
           <li><a href="http://www.hetlabrotterdam.nl">&#8592; Terug naar de website</a></li>
-          <li><a href="../../../index.html">Home</a></li>
+          <li><a href="../../../index.html">Lessenoverzicht</a></li>
           <li><a href="../les_1">Les 1: Inleiding</a></li>
           <li><a href="../les_2">Les 2: Stoplicht</a></li>
           <li><a href="../les_3">Les 3: LDR</a></li>
@@ -80,14 +81,14 @@
           <div class="left_text_block">
             <h3>LDR</h3>
             <p>
-              De Arduino kan verschillende signalen ontvangen, namelijk analoog en digitaal. In deze les gaan wij werken met analoog. Een analoog signaal kan meerdere waardes bevattan, in het geval van de Arduino zijn dit 1024 waardes. Deze waardes lopen van 0 tot 1023. Hierdoor kan je veel nauwkeuriger meten dan met een digitaal signaal dat maar twee waardes kan bevatten, namelijk 0 of 1.
+              De Arduino kan verschillende signalen ontvangen, namelijk <strong>analoog</strong> en <strong>digitaal</strong>. In deze les gaan wij werken met analoog. Een analoog signaal kan <strong>meerdere</strong> waardes bevattan, in het geval van de Arduino zijn dit 1024 waardes. Deze waardes lopen van 0 tot 1023. Hierdoor kan je veel nauwkeuriger meten dan met een digitaal signaal dat maar twee waardes kan bevatten, namelijk 0 of 1.
             </p>
             <p>
-              Om deze les te maken heb je de volgende schakeling nodig, deze is hiernaast weergegeven. Deze schakeling is niet heel anders dan in les 2. Het enige wat veranderd is dat de push button vervangen is door een LDR. Deze LDR wordt op haast dezelfde manier aangesloten als de push button. Hierbij moet worden opgelet dat de data lijn niet naar een digitale poort gaat, maar naar een analoge poort.
+              Om deze les te maken heb je de volgende schakeling nodig, deze is hiernaast weergegeven. Deze schakeling is niet heel anders dan in les 2. Het enige wat veranderd is dat de push button vervangen is door een LDR. Deze LDR wordt op haast dezelfde manier aangesloten als de push button. Hierbij moet worden opgelet dat de data lijn <strong>niet</strong> naar een digitale poort gaat, maar naar een analoge poort.
             </p>
           </div>
           <div class="right_text_block">
-            <img src="../assets/img/les_3/ldr_circuit.png" alt="ldr circuit">
+            <img src="../assets/img/les_3/ldr_circuit.png" alt="ldr circuit" data-action="zoom">
           </div>
         </div>
         <div class="text_block clearfix">
@@ -105,5 +106,8 @@
         </div>
     </div>
   </div>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script type="text/javascript" src="../assets/js/transition.js"></script>
+  <script type="text/javascript" src="../assets/js/zoom.js"></script>
 </body>
 </html>
